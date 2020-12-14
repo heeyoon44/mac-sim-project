@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+
+<configuration>
+
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL"/>
+	</settings>
+
+	<typeAliases>
+		<!-- 별칭등록자리 -->
+	
+	</typeAliases>
+	
+	<!-- 원래는 DB접속과 관련된 내용들을 작성했었음!! => 다른곳(root-context)에서 할 예정 -->
+	
+	<!-- 사용할 메퍼파일등록자리 -->
+	<mappers>
+		
+	</mappers>
+
+
+
+</configuration>
