@@ -1,0 +1,31 @@
+package com.beer.macSim.member.model.vo;
+
+import lombok.*;
+
+import java.util.Date;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
+public class Member {
+
+    private int userNo;
+    private String userId;
+    private String userName;
+    private String gender;
+    private String email;
+    private String address;
+    private String extraAddress;
+    private String detailAddress;
+    private String postCode;
+    private Date birth;
+    private String phone;
+    private int point;
+    private int status;
+    private Date loginTime;
+    private int report;
+
+
+}
