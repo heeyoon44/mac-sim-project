@@ -103,7 +103,7 @@
 
 <br><br>
 
-<form action="member.me" method="POST">
+<form action="memberUpdate.me" method="POST">
     <div id="userInfo">
         <ul>
             <li><span>*아이디</span> <input  type="text" value="Beerking" readonly> </li>
@@ -112,11 +112,10 @@
                 <span>성별</span> <span>M</span> <input type="radio" name="gender" value="M" checked>
                 <span>F</span> <input type="radio"name="gender" value="F">
             </li>
-            <li><span>나이</span> <input type="number" name="age" value="25"> </li>
+
             <li><span>전화번호</span> <input type="text"  name="phone" value="010-5761-0000" ></li>
             <li><span>이메일</span> <input type="email" name="email" value="tjdwnn032@naver.com"></li>
             <li><span>주소</span> <input type="text" name="address" value="주소"></li>
-            <li><span>생년월일</span> <input type="text" name="birth" value=960418></li>
         </ul>
 
         <div align="left" class="subBtn">
@@ -126,21 +125,48 @@
     </div>
 </form>
 
-<form action="" method="POST">
+<form action="memberPwdUpdate" method="POST">
     <div id="changePwd">
         <ul>
-            <li> <span>아이디 : BeerKing</span> </li>
-            <li> <span>현재비밀번호 :</span> <input type="password" name="password"> </li>
-            <li> <span>신규비밀번호 : </span> <input type="password" name="newPwd"> </li>
-            <li> <span>신규비밀번호 확인 : </span> <input type="password"> </li>
+            <li> <span>아이디 : ${loginUser.userId}</span> </li>
+            <li> <span>현재비밀번호 :</span> <input type="password" name="userPwd"> </li>
+            <li> <span>신규비밀번호 : </span> <input type="password" id="newPwd" name="newPwd"> </li>
+            <li> <span>신규비밀번호 확인 : </span> <input type="password" id="checkPwd"> </li>
         </ul>
 
         <div align="left" class="subBtn">
             <button type="button" class="btn btn-warning">취소</button>
-            <button type="submit" class="btn btn-warning">수정</button>
+            <button type="submit" id="updateBtn"  class="btn btn-warning" disabled >수정</button>
         </div>
     </div>
 </form>
+
+<!--새로운비밀번호와 새로운비밀번호 확인-->
+<script>
+    $(function(){
+        var newPwd = $("#newPwd");
+        var checkPwd = $("#checkPwd");
+        newPwd.keyup(function(){
+
+            var i = newPwd.val();
+
+            checkPwd.keyup(function(){
+                var y = checkPwd.val();
+
+
+                if(i == y){
+                    $("#updateBtn").removeAttr("disabled");
+                }else{
+                    $("#updateBtn").attr("disabled",true)
+                }
+
+            });
+
+        });
+
+    });
+</script>
+
 
 <form action="" method="POST">
     <div id="deleteMember">
@@ -158,7 +184,7 @@
         <!-- The Modal -->
         <div class="modal" id="myModal">
             <div class="modal-dialog">
-                <div class="modal-content">
+                <form class="modal-content">
 
                     <!-- Modal Header -->
                     <div class="modal-header">
@@ -167,7 +193,7 @@
                     </div>
 
                     <!-- Modal body -->
-                    <div class="modal-body">
+                    <div action="memberDelete.me" method="post" class="modal-body">
                         현재 비밀번호를 입력해주세요
                         <input type="password" name="pwd" >
                     </div>
@@ -178,7 +204,7 @@
                         <button type="submit" class="btn btn-danger" data-dismiss="modal">탈퇴</button>
                     </div>
 
-                </div>
+                </form>
             </div>
         </div>
     </div>

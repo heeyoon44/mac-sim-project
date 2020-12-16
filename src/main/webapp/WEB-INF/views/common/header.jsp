@@ -26,7 +26,7 @@
 <header>
     <div class="inner">
         <div class="header__left">
-            <a class="header__logo" href="WEB-INF/views/main.jsp">
+            <a class="header__logo" href="/macSim">
                 <img src="resources/images/macsimXy.png" alt="logo"
                 /></a>
             <span class="div-line"></span>

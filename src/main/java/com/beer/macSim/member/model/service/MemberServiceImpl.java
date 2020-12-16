@@ -1,10 +1,19 @@
 package com.beer.macSim.member.model.service;
 
+import com.beer.macSim.member.model.dao.MemberDao;
 import com.beer.macSim.member.model.vo.Member;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class MemberServiceImpl implements MemberService {
+    @Autowired
+    private MemberDao mDao;
+
+    @Autowired
+    private SqlSessionTemplate sqlSession;
+
     @Override
     public Member loginMember(Member m) {
         return null;
@@ -17,11 +26,15 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public int updateMember(Member m) {
-        return 0;
+        return mDao.updateMember(sqlSession,m);
     }
 
+
+
+
     @Override
-    public int deleteMember(String userId) {
-        return 0;
+    public int deleteMember(String userPwd) {
+
+        return mDao.deleteMember(sqlSession,userPwd);
     }
 }

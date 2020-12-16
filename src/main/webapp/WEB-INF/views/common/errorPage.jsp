@@ -1,14 +1,14 @@
 <%--
   Created by IntelliJ IDEA.
   User: chois
-  Date: 2020-12-15
-  Time: 오후 4:37
+  Date: 2020-12-16
+  Time: 오후 8:16
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>마이페이지</title>
+    <title>에러페이지</title>
     <style>
 
         #mypageMenu{
@@ -30,25 +30,18 @@
         #mypageMenu a:hover{
             color: rgb(236, 191, 46);
         }
-
-        #userTable{
-            color:white;
-            text-align: left;
-            font-size: 20px;
-            border:2px solid white;
-
-        }
-
-        #userTable a{
-            color:white;
-            text-decoration: none;
-        }
-
-        #userTable a:hover{
-            color: rgb(236, 191, 46);
-        }
-
     </style>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+            integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+            crossorigin="anonymous"
+    />
+    <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="resources/css/header.css" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -61,45 +54,24 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-
-<body style="background-color: #191919;">
-
-<jsp:include page="../common/header.jsp"/>
+<body>
+<jsp:include page="header.jsp"/>
 <br>
 <hr style="height:2px;border-width:0;color:white;background-color:white">
 
 <div id="header">
     <ul id="mypageMenu">
-        <li><a href="update.me">정보수정</a></li>
-        <li><a href="review.me">나의리뷰</a></li>
-        <li><a href="point.me">포인트내역</a></li>
-        <li><a href="event.me">이벤트신청현황</a></li>
-        <li><a href="group.me">공구신청현황</a></li>
-        <li><a href="beer.me">맥주신청현황</a></li>
-        <li><a href="category.me">나만의카테고리</a></li>
+        <li><a href="">정보수정</a></li>
+        <li><a href="">나의리뷰</a></li>
+        <li><a href="">포인트내역</a></li>
+        <li><a href="">이벤트신청현황</a></li>
+        <li><a href="">공구신청현황</a></li>
+        <li><a href="">맥주신청현황</a></li>
+        <li><a href="">나만의카테고리</a></li>
     </ul>
 </div>
 
 <hr style="height:2px;border-width:0;color:white;background-color:white">
-
-<br><br>
-
-
-<table id="userTable">
-    <tr>
-        <td rowspan="2">
-            <img src="resources/images/logo.png" alt="회원등록이미지" width="200">
-        </td>
-        <th>
-            <p>${loginUser.userId}</p>
-        </th>
-
-    </tr>
-    <tr>
-        <th width="650">
-            <p>${loginUser.userId} 님은 <a href="">(2)건의 리뷰</a>를 남겼고, <a href="">(2)건의 이벤트신청</a>,<a href="">(1)건의 공구신청</a> 중입니다.</p>
-        </th>
-    </tr>
-</table>
+<h1 align="center">에러에러에러</h1>
 </body>
 </html>
