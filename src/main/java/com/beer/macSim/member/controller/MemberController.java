@@ -89,5 +89,21 @@ public class MemberController {
 
     }
 
+    
+    @RequestMapping("enrollForm.me")
+    public String enrollForm() {
+    	return "member/enrollForm";
+    }
 
+    @RequestMapping("loginForm.me")
+    public String loginForm() {
+    	return "member/loginForm";
+    }
+    
+    @RequestMapping("idFindForm.me")
+    public String idFindForm() {
+    	return "member/idFindForm";
+    }
+    
+    
 }
