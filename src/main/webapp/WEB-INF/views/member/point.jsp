@@ -1,14 +1,14 @@
 <%--
   Created by IntelliJ IDEA.
   User: chois
-  Date: 2020-12-15
-  Time: 오후 4:37
+  Date: 2020-12-16
+  Time: 오전 12:47
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>마이페이지</title>
+    <title>포인트내역</title>
     <style>
 
         #mypageMenu{
@@ -24,31 +24,22 @@
         #mypageMenu a {
             text-decoration: none;
             color:white;
-            padding:5px 10px;
+
         }
 
         #mypageMenu a:hover{
             color: rgb(236, 191, 46);
         }
 
-        #userTable{
+        #pointHistory{
             color:white;
-            text-align: left;
-            font-size: 20px;
-            border:2px solid white;
-
         }
-
-        #userTable a{
-            color:white;
-            text-decoration: none;
+        #point{
+            font-size: 18px;
+            margin-left: 30px;
         }
-
-        #userTable a:hover{
-            color: rgb(236, 191, 46);
-        }
-
     </style>
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -61,11 +52,9 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-
-<body style="background-color: #191919;">
-
+<body>
 <jsp:include page="../common/header.jsp"/>
-<br>
+
 <hr style="height:2px;border-width:0;color:white;background-color:white">
 
 <div id="header">
@@ -84,22 +73,41 @@
 
 <br><br>
 
+<div id="pointHistory">
+    <h1 style="margin-left: 30px; color: rgb(236, 191, 46); font-size:30px">포인트 내역</h1>
+    <h3 style="margin-left: 30px; font-size:20px">현재 보유 포인트 : <span id="nowPoint">130</span></h3>
+    <br>
+    <ul id="point">
+        <li>
+            <span>2020-12-12</span>
+            <span>적립</span>
+            <span>회원가입</span>
+            <span>100p</span>
+        </li>
+        <br>
+        <li>
+            <span>2020-12-12</span>
+            <span>적립</span>
+            <span>회원가입</span>
+            <span>100p</span>
+        </li>
+        <br>
+        <li>
+            <span>2020-12-13</span>
+            <span>차감</span>
+            <span>이벤트신청</span>
+            <span>-5p</span>
+        </li>
+        <br>
+        <li>
+            <span>2020-12-12</span>
+            <span>적립</span>
+            <span>회원가입</span>
+            <span>100p</span>
+        </li>
+        <br>
 
-<table id="userTable">
-    <tr>
-        <td rowspan="2">
-            <img src="resources/images/logo.png" alt="회원등록이미지" width="200">
-        </td>
-        <th>
-            <p>BeerKing</p>
-        </th>
-
-    </tr>
-    <tr>
-        <th width="650">
-            <p>BeerKing 님은 <a href="">(2)건의 리뷰</a>를 남겼고, <a href="">(2)건의 이벤트신청</a>,<a href="">(1)건의 공구신청</a> 중입니다.</p>
-        </th>
-    </tr>
-</table>
+    </ul>
+</div>
 </body>
 </html>

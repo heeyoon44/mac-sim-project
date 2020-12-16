@@ -1,7 +1,9 @@
 package com.beer.macSim.member.model.service;
 
 import com.beer.macSim.member.model.vo.Member;
+import org.springframework.stereotype.Service;
 
+@Service
 public class MemberServiceImpl implements MemberService {
     @Override
     public Member loginMember(Member m) {

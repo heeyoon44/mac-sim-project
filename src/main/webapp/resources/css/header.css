@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #2a2725;
+  background-image: url("../images/bottle-caps.png");
+  background-color: #2a2725;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right bottom;
+  background-size: 300px;
+}
+header {
+  margin-top: 10px;
+}
+header::after {
+  content: "";
+  display: block;
+  width: 1200px;
+  border-bottom: 1px solid #ddd;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.div-line {
+  width: 2px;
+  height: 25px;
+  border: none;
+  background: #333;
+  margin: 0 25px;
+}
+a {
+  text-decoration: none;
+  color: #ddd;
+}
+.inner {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__left {
+  display: flex;
+  align-items: center;
+}
+.header__left .header__logo {
+  display: block;
+  max-width: 130px;
+}
+.header__logo img {
+  width: 100%;
+}
+.header__left .header__nav,
+.header__right .header__nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.header__left .header__nav li a,
+.header__right .header__nav li a {
+  font-size: 14px;
+}
+.header__left .header__nav li a:hover {
+  font-weight: bold;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 25px;
+}
+.header__right .nav__searchbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: -100px;
+  transition: all 0.3s;
+}
+.nav__searchbox input {
+  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0;
+  color: #ddd;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+.nav__searchbox input:focus {
+  border-bottom: 1px solid #ddd;
+  width: 200px;
+}
+.nav__searchbox i {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+.nav__searchbox i span {
+  font-size: 20px;
+  color: #ddd;
+}
+main .inner {
+  max-width: 1000px;
+}
+
+/* 버튼 BUTTON */
+.btn {
+  width: 90px;
+  height: 35px;
+  color: #ddd;
+  background: none;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.btn-small {
+  width: 70px;
+  height: 25px;
+}
+.btn-gray {
+  background: #6d6565;
+}
+.btn-lightgray {
+  background: #928888;
+}
+.btn-yellow {
+  background: #ecbf2e;
+  color: #2a2725;
+}
+.btn-bold {
+  font-weight: bold;
+}
+
+/* 모달 MODAL */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(1000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(1000px);
+  }
+}
+
+.modal__layout {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 3, 0.7);
+  z-index: 9999;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  display: none;
+  animation: fadeIn 0.4s ease-in-out forwards;
+}
+.modal__active {
+  display: flex;
+}
+.modal__layout .modal__box {
+  min-width: 300px;
+  padding: 25px 35px;
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  animation: slideUp 0.4s ease-in-out forwards;
+}
+.modal__box h1 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.modal__layout .modal__box span {
+  font-size: 17px;
+  font-weight: bold;
+}
+.modal__btn_wrapper {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.modal__btn_wrapper button {
+  width: 45%;
+  height: 30px;
+  border: 1px solid #000;
+  outline: none;
+}
+.modal__btn_wrapper button:hover {
+  background: #e5e5e5;
+}
+.modal__layout .modal__box textarea {
+  width: 300px;
+}

@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+}
+/* div,
+ul,
+li {
+  border: 1px solid #fff;
+} */
+
+/* .main__top-left */
+.main__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  height: 480px;
+}
+.main__top-left {
+  flex: 0.65;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}
+.main__top-right {
+  flex: 0.35;
+  height: 100%;
+}
+.main__top-left .logo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main__top-left .logo span {
+  color: #ecbf2e;
+  font-size: 16px;
+  font-weight: bold;
+}
+.main__search-box {
+  display: flex;
+}
+.main__search-box input {
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  width: 400px;
+  color: #ddd;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+.main__search-box input::placeholder {
+  color: #777;
+}
+.main__search-box input:focus {
+  width: 500px;
+}
+.main__search-box i {
+  background: #ddd;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+.main__search-box i span {
+}
+.main__recom .main__title,
+.main__bottom .main__title,
+.bottom__bottom .main__title {
+  color: #ddd;
+  font-size: 18px;
+  font-weight: bold;
+  /* margin-bottom: 20px; */
+  text-shadow: -2px -2px 1px #777;
+}
+.main__recom .recom__wrapper {
+  display: flex;
+  align-items: center;
+  height: 130px;
+  margin-top: 20px;
+  padding-right: 50px;
+}
+.recom__wrapper .recom__img {
+  height: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.recom__wrapper div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+}
+.recom__wrapper .recom__title {
+  color: #ddd;
+  font-size: 17px;
+  font-weight: bold;
+}
+.recom__wrapper .recom__desc {
+  color: #ddd;
+  font-size: 15px;
+}
+/* 이 맥주 보러가기 */
+.recom__wrapper .recom__more,
+.middle__right .recom__more,
+.bottom__left .recom__more,
+.bottom__right .recom__more {
+  color: #777;
+  font-size: 15px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+/* .main__top-right */
+.main__top-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.right__nav {
+  margin-right: 50%;
+  transform: translateX(50%);
+}
+.right__nav button {
+  position: relative;
+}
+.right__nav span {
+  position: absolute;
+  transform: translateY(-10%);
+  right: 30px;
+}
+.right__nav li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.right__nav li button {
+  width: 200px;
+  height: 50px;
+  text-align: left;
+  padding-left: 30px;
+  font-size: 17px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #eee;
+  /*  */
+  border-radius: 57px;
+  background: linear-gradient(225deg, #262321, #2d2a28);
+  box-shadow: -7px 7px 19px #181715, 7px -7px 19px #3c3735;
+}
+.right__nav li button:hover {
+  color: #ecbf2e;
+}
+.right__nav li button:active {
+  color: #dbae1a;
+  border-radius: 57px;
+  background: #2a2725;
+  box-shadow: inset -7px 7px 19px #181715, inset 7px -7px 19px #3c3735;
+}
+
+/* .main__bottom */
+.main__bottom {
+  margin-top: 100px;
+}
+.main__bottom p {
+  color: #aaa;
+}
+.main__bottom .main__title {
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+/* bottom의 middle__left */
+.bottom__middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 330px;
+  margin-top: 50px;
+}
+.bottom__middle .middle__left {
+  flex: 0.65;
+  height: 100%;
+}
+.bottom__middle .middle__right {
+  flex: 0.35;
+  height: 100%;
+}
+.middle__left ul,
+.middle__right ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ddd;
+  height: 100%;
+}
+.middle__left ul {
+  gap: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.middle__left .rank__first-icon {
+  color: #ecbf2e;
+}
+.middle__left .rank__first-icon,
+.middle__left .rank__first-name {
+  font-size: 25px;
+}
+.middle__left ul li {
+  display: flex;
+  gap: 15px;
+  margin-left: 100px;
+}
+.middle__left ul li span {
+}
+
+/* bottom의 middle__right */
+.middle__right ul {
+}
+
+.middle__right .rank__beer-img,
+.bottom__bottom .rank__beer-img {
+  max-height: 180px;
+  display: block;
+  margin: 0 auto;
+}
+.middle__right .rank__beer-desc {
+}
+.middle__right .rank__beer-score {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rank__beer-score > div {
+  display: flex;
+  align-items: center;
+}
+.rank__beer-score i span {
+  color: #ecbf2e;
+}
+
+/* bottom의 bottom__bottom */
+.bottom__bottom {
+  margin-top: 100px;
+  margin-bottom: 70px;
+  display: flex;
+  align-items: center;
+}
+.bottom__bottom .bottom__left,
+.bottom__bottom .bottom__right {
+  flex: 1;
+}
+.bottom__bottom .bottom__left ul,
+.bottom__bottom .bottom__right ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+.bottom__bottom .main__title {
+  font-size: 25px;
+  margin-top: 0;
+}
+.bottom__bottom .bottom__name {
+  color: #ddd;
+  font-size: 20px;
+  font-weight: bold;
+}
+.bottom__bottom .bottom__name i {
+  color: #ecbf2e;
+}
+.bottom__bottom .recom__more {
+  display: inline-block;
+  transform: translateX(50px);
+}
