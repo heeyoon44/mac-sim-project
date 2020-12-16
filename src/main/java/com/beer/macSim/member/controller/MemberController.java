@@ -105,5 +105,24 @@ public class MemberController {
     	return "member/idFindForm";
     }
     
+    @RequestMapping("pwdFindForm.me")
+    public String pwdFindForm() {
+    	return "member/pwdFindForm";
+    }
+    
+    @RequestMapping("agreeForm.me")
+    public String agreeForm() {
+    	return "member/agreeForm";
+    }
     
 }
+
+
+
+
+
+
+
+
+
+
